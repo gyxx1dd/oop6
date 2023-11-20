@@ -4,10 +4,10 @@
 using namespace std;
 
 template <typename T>
-T func(T a)
+T func(T &a)
 {
-	cout << abs(a) << endl;
-	return 1;
+	a = abs(a);
+	return a;
 }
 
 
@@ -17,6 +17,7 @@ int main()
 	int a;
 	cin >> a;
 	func(a);
+	cout << a << endl;
 
 
 	return 0;
